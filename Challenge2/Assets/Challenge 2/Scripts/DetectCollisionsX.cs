@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Challenge 2
+ * Destroys this when colliding with anything, and scores if it was a dog
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +25,7 @@ public class DetectCollisionsX : MonoBehaviour
         }
         else
         {
-            scoreManager.TakeDamage();
+            // scoreManager.TakeDamage(); // covered by DestroyOutOfBounds
             Destroy(gameObject);
         }
         

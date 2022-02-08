@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Challenge 2
+ * Player can spawn dogs
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
