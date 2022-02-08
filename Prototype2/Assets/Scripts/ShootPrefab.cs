@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype2
+ * Spawns a prefab at the player's position upon input
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype2
+ * Calls Win() when first going past a Z position
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

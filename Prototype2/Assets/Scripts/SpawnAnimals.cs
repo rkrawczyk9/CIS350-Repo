@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype2
+ * Spawns animals as its children over time
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

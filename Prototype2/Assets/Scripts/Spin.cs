@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype2
+ * Constantly spins
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype2
+ * Controls player movement, with boundaries
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

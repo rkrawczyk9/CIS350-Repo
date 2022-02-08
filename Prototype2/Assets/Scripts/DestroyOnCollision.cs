@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype2
+ * Destroys self (cookie) and animal, and calls Score()
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
