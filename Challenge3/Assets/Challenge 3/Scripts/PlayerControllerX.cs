@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerX : MonoBehaviour
 {
-    public bool gameOver;
-
-    public float floatForce;
+    public float floatForce, bounceForce;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
 
@@ -14,8 +12,9 @@ public class PlayerControllerX : MonoBehaviour
     public ParticleSystem fireworksParticle;
 
     private AudioSource playerAudio;
-    public AudioClip moneySound;
-    public AudioClip explodeSound;
+    public AudioClip moneySound, explodeSound, bounceSound;
+
+    public ScoreManager scoreManager;
 
 
     // Start is called before the first frame update
@@ -34,7 +33,7 @@ public class PlayerControllerX : MonoBehaviour
     void Update()
     {
         // While space is pressed and player is low enough, float up
-        if (Input.GetKey(KeyCode.Space) && !gameOver)
+        if (Input.GetKey(KeyCode.Space))
         {
             playerRb.AddForce(Vector3.up * floatForce);
         }
@@ -47,8 +46,9 @@ public class PlayerControllerX : MonoBehaviour
         {
             explosionParticle.Play();
             playerAudio.PlayOneShot(explodeSound, 1.0f);
-            gameOver = true;
-            Debug.Log("Game Over!");
+            scoreManager.Lose();
+            playerRb.constraints = RigidbodyConstraints.FreezeAll; // Stop moving
+            GetComponent<MeshRenderer>().enabled = false;
             Destroy(other.gameObject);
         } 
 
@@ -58,7 +58,13 @@ public class PlayerControllerX : MonoBehaviour
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
+            scoreManager.Score();
+        }
 
+        else if (other.gameObject.CompareTag("Ground"))
+        {
+            playerAudio.PlayOneShot(bounceSound, 1.0f);
+            playerRb.AddForce(Vector3.up * bounceForce);
         }
 
     }
