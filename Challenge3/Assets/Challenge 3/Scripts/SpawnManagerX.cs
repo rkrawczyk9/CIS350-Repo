@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Challenge 3
+ * Spawn obstacles
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +31,9 @@ public class SpawnManagerX : MonoBehaviour
         int index = Random.Range(0, objectPrefabs.Length);
 
         // Spawn new object
-        Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
+        if (!GameObject.Find("ScoreManager").GetComponent<ScoreManager>().gameOver)
+        {
+            Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
+        }
     }
 }

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Challenge 3
+ * Move left at an editor-set speed
+ */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Challenge 3
+ * Repeats background
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Challenge 3
+ * Controls player, including SFX and particle effects
+ */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
