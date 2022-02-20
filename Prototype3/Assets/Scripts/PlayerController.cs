@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype 3
+ * Controls player
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

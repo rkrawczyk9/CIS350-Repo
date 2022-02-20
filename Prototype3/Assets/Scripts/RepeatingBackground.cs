@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype 3
+ * Repeats the background
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +20,7 @@ public class RepeatingBackground : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         size_x = spriteRenderer.bounds.size.x;
+        UpdateSprite();
     }
 
     // Update is called once per frame
@@ -23,7 +30,12 @@ public class RepeatingBackground : MonoBehaviour
         if(transform.position.x < swap_x)
         {
             transform.Translate(Vector3.right * size_x * 2);
-            spriteRenderer.sprite = backgrounds[Random.Range(0,backgrounds.Length)];
+            UpdateSprite();
         }
+    }
+
+    void UpdateSprite()
+    {
+        spriteRenderer.sprite = backgrounds[Random.Range(0, backgrounds.Length)];
     }
 }

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype 3
+ * Spawns Obstacles and TriggerZones
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Robert Krawczyk
+ * Prototype 3
+ * Moves left and destroys self offscreen
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
